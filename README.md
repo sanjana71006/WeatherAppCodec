@@ -1,7 +1,3 @@
-Here’s a clean and professional `README.md` content for your **Weather Forecast Pro** GitHub repository:
-
----
-
 # 🌤️ Weather Forecast Pro
 
 **Weather Forecast Pro** is a modern, responsive weather application built using **HTML**, **CSS**, and **JavaScript**, integrating the **OpenWeatherMap API**. It allows users to search for weather updates by city or use their current location for accurate real-time data.
