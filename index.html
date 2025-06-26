@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="codec.jpeg" type="image/jpeg">
+</head>
+<body>
+    <div class="weather-emoji">☀️</div>
+    <div class="weather-emoji">⛅</div>
+    <div class="weather-emoji">🌧️</div>
+    <div class="weather-emoji">❄️</div>
+    <div class="weather-emoji">🌩️</div>
+    <div class="weather-emoji">🌪️</div>
+    <div class="weather-emoji">🌈</div>
+    
+    <div class="container">
+        <header class="app-header">
+            <img src="codec.jpeg" alt="CODEC Logo" class="logo-circle">
+            <h1>Weather Forecast Pro</h1>
+            <p class="tagline">Your reliable weather companion</p>
+        </header>
+
+        <div class="search-section">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn" class="btn primary">Get Weather</button>
+            <button id="clear-btn" class="btn secondary">Clear</button>
+            <button id="location-btn" class="btn primary" title="Use current location">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+        </div>
+
+        <div class="loading-indicator">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <div class="error-message"></div>
+
+        <main class="weather-display">
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <div class="weather-card current">
+                    <div class="weather-main">
+                        <div class="weather-icon"><i class="wi wi-day-sunny"></i></div>
+                        <div class="temp-display">
+                            <span class="temp-value">--</span>
+                            <span class="temp-unit">°C</span>
+                            <button id="toggle-unit" class="unit-toggle">°F</button>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <p class="city-name">City Name</p>
+                        <p class="weather-desc">Weather description</p>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <i class="fas fa-tint"></i>
+                                <span class="humidity">--%</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-wind"></i>
+                                <span class="wind">-- km/h</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-cloud"></i>
+                                <span class="clouds">--%</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-arrow-down"></i>
+                                <span class="pressure">-- hPa</span>
+                            </div>
+                        </div>
+                        <p class="date-time">Last updated: --</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-weather">
+                <div class="section-header">
+                    <h2>5-Day Forecast</h2>
+                    <div class="forecast-toggle">
+                        <button id="toggle-view" class="btn secondary">
+                            <i class="fas fa-list"></i> List View
+                        </button>
+                    </div>
+                </div>
+                <div class="forecast-container list-view">
+                    <!-- Forecast cards will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Data provided by OpenWeatherMap</p>
+            <p class="refresh-note">Click "Get Weather" to refresh data</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
