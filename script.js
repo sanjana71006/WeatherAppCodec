@@ -29,7 +29,7 @@ let isListView = true;
 let weatherData = null;
 
 // Hardcoded API key (for development only)
-const API_KEY = 'a47aec3085bf7421fc20e9a287c052b0';
+const API_KEY = '';
 
 // Weather icon mapping
 const weatherIconMap = {
